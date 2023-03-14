@@ -19,30 +19,30 @@ require_once('vendor/autoload.php');
 </head>
 <body>
     <div class="container d-flex justify-content-center">
-        <form>
+        <form action="src/Controllers/FormController.php/teste" method="POST">
             <div class="mt-4">
                 <h3>Formulário</h3>
                 <p>Por favor, preencha os campos abaixo para enviar seu currículo:</p>
             </div>
             <div class="form-group">
                 <label for="nome">Nome</label>
-                <input type="text" class="form-control" id="nome" required>
+                <input type="text" name="nome" class="form-control" id="nome" required>
             </div>
             <div class="form-group">
                 <label for="email">E-mail</label>
-                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com" required>
             </div>
             <div class="form-group">
                 <label for="telefone">Telefone</label>
-                <input type="text" class="form-control" id="telefone" placeholder="(00) 00000-0000" required>
+                <input type="text" name="telefone" class="form-control" id="telefone" placeholder="(00) 00000-0000" required>
             </div>
             <div class="form-group">
                 <label for="cargo">Cargo desejado</label>
-                <textarea class="form-control" id="cargo" rows="2" required></textarea>
+                <textarea class="form-control" name="cargo_desejado" id="cargo" rows="2" required></textarea>
             </div>
             <div class="form-group">
                 <label for="escolaridade">Escolaridade</label>
-                <select class="form-control" id="escolaridade" required>
+                <select class="form-control" name="escolaridade" id="escolaridade" required>
                     <option value="">Selecione uma opção</option>
                     <option value="fundamental">Ensino Fundamental completo</option>
                     <option value="medio">Ensino Médio completo</option>
@@ -52,11 +52,14 @@ require_once('vendor/autoload.php');
             </div>
             <div class="form-group">
                 <label for="observacoes">Observações</label>
-                <textarea class="form-control" id="observacoes" rows="3"></textarea>
+                <textarea class="form-control" name="observacoes" id="observacoes" rows="3"></textarea>
             </div>
             <div class="form-group">
                 <label for="arquivo">Selecione o arquivo ( <i> Extensões permitidas: .doc, .docx ou .pdf </i> )</label>
-                <input type="file" class="form-control" id="arquivo" required>
+                <input type="file" name="arquivo" class="form-control" id="arquivo" required>
+            </div>
+            <div class="col-lg-12" style="text-align: right;">
+                <button type="submit" class="btn btn-primary ml-auto">Enviar</button>
             </div>
         </form>
     </div>
